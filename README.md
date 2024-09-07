@@ -1,23 +1,66 @@
-Introducción: El dataset elegido se trata de las reservas de una cadena hotelera, donde se intentarà analizar el motivo de la gran cantidad de cancelaciones que se dan en un perìodo de tiempo y sugerir medidas que se pueden implementar para reducir las cancelaciones y asegurar los ingresos. Este dataset se obtuvo del depósito de datos de Kaggle. Kaggle es un repositorio público en línea de datos que permite a los usuarios acceder y analizar datos tomados de diferentes fuentes. Este conjunto de datos incluye información sobre dos tipos diferentes de hoteles (ciudad y resort) y si se cancelaron las reservas. Cada registro es una reserva de hotel e incluye información como la fecha de llegada, las noches indicadas, el número de adultos/niños alojados, cantidad de solicitudes, etc.
+Introducción
+En este proyecto, se analizarán los datos de reservas de una cadena hotelera para investigar las razones detrás de las altas tasas de cancelación y proponer estrategias para reducir estas cancelaciones y asegurar los ingresos. El dataset se obtuvo de Kaggle, una plataforma pública que proporciona acceso a una amplia variedad de datos. El conjunto de datos incluye información sobre dos tipos de hoteles (ciudad y resort) y si las reservas fueron canceladas o no. Cada registro corresponde a una reserva e incluye detalles como la fecha de llegada, duración de la estancia, número de adultos y niños, solicitudes especiales, entre otros.
 
-Problema planteado y descripción del proyecto. El CEO de una importante empresa hotelera descubre un problema en el contrato con las agencias de marketing. El contrato establece un costo mensual fijo y un costo variable basado en las reservas realizadas. El CEO se da cuenta de que están pagando por reservas canceladas y sospecha que las cancelaciones son frecuentes. El gerente financiero admite que no han verificado si ha habido cambios en la tasa de cancelación desde que se firmó el contrato, por lo que se intentará analizar estos costos. Las cancelaciones de reservas de hoteles pueden resultar perjudiciales para los propietarios de empresas; aunque a veces existen motivos genuinos para que los invitados lo hagan. Estas cancelaciones de último momento pueden provocar una pérdida de ingresos a menos que se tomen algunas medidas para mitigar la pérdida. El propósito de este proyecto es analizar datos de reservas de hoteles, investigar cancelaciones y sus patrones subyacentes; y sugerir medidas que se pueden implementar para reducir las cancelaciones y asegurar los ingresos.
+Problema Planteado
+El CEO de una cadena hotelera ha identificado un problema en el contrato con las agencias de marketing. El contrato establece un costo fijo mensual y un costo variable basado en las reservas realizadas. El CEO sospecha que están pagando por reservas canceladas, y no se ha verificado si la tasa de cancelación ha cambiado desde que se firmó el contrato. Las cancelaciones de última hora pueden llevar a pérdidas de ingresos significativas. El objetivo de este proyecto es analizar los datos de reservas, investigar los patrones de cancelación y sugerir medidas para reducirlas y proteger los ingresos.
 
-Descripciòn de los campos: hotel = Hotel Canceled = Cancelado lead time = Plazo De Entrega arrival_date_year = Fecha De Llegada Año arrival_date_month = Fecha De Llegada Mes arrival_date_week_number = Fecha De Llegada Número De Semana arrival_date_day_of_month = Fecha De Llegada Día De Mes stays_in_weekend_nights = Estancia En Noches De Fin De Semana stays_in_week_nights = Estancia En Noches De Semana adults = Adultos children = Niños babies = Bebés meal = Comida country = País market_segment = Segmento Del Mercado distribution_channel = Canal De Distribución is_repeated_guest = Es Huésped Repetido previous_cancellations = Cancelaciones Anteriores previous_bookings_not_canceled = Reservas Anteriores No Canceladas reserved_room_type = Tipo De Habitación Reservada assigned_room_type = Tipo De Habitación Asignada booking_changes = Cambios En La Reserva agent = Agente company = Compañía days_in_waiting_list = Dìas En La Lista De Espera customer_type = Tipo De Cliente adr = Sigla para clasificar riesgo de cancelación required_car_parking_spaces = Plaza De Aparcamiento Obligatoria total_of_special_requests = Total De Solicitudes Especiales reservation_status = Estado De Reserva reservation_status_date = Fecha De Estado De Reserva
+Descripción de los Campos
+hotel: Tipo de hotel (Ciudad o Resort)
+is_canceled: Indicador de cancelación (1 = Cancelado, 0 = No Cancelado)
+lead_time: Tiempo de anticipación en días para la reserva
+arrival_date_year: Año de llegada
+arrival_date_month: Mes de llegada
+arrival_date_week_number: Número de semana de llegada
+arrival_date_day_of_month: Día del mes de llegada
+stays_in_weekend_nights: Noches de fin de semana en la estancia
+stays_in_week_nights: Noches de semana en la estancia
+adults: Número de adultos
+children: Número de niños
+babies: Número de bebés
+meal: Tipo de comida
+country: País de origen del huésped
+market_segment: Segmento de mercado
+distribution_channel: Canal de distribución
+is_repeated_guest: Indicador de huésped recurrente (1 = Sí, 0 = No)
+previous_cancellations: Número de cancelaciones anteriores
+previous_bookings_not_canceled: Número de reservas anteriores no canceladas
+reserved_room_type: Tipo de habitación reservada
+assigned_room_type: Tipo de habitación asignada
+booking_changes: Número de cambios en la reserva
+agent: Agente de reservas
+company: Compañía asociada con la reserva
+days_in_waiting_list: Días en lista de espera
+customer_type: Tipo de cliente
+adr: Tarifa diaria promedio
+required_car_parking_spaces: Espacios de aparcamiento requeridos
+total_of_special_requests: Número total de solicitudes especiales
+reservation_status: Estado de la reserva
+reservation_status_date: Fecha del estado de la reserva
+Preguntas de Investigación
+¿Cuál es el porcentaje total de cancelaciones en la cadena hotelera?
+¿En qué tipo de hotel ocurren con mayor frecuencia estas cancelaciones?
+¿En qué mes del año se producen la mayor cantidad de cancelaciones?
+¿De qué continente proviene el mayor porcentaje de cancelaciones? ¿Y de qué países?
+¿Cuál es la tarifa media (ADR) para las reservas canceladas frente a las reservas cumplidas?
+Según el gráfico del punto 4, ¿qué metodología de reservas se utiliza para las reservas en Portugal?
+¿Hay muchas cancelaciones provenientes de agencias?
+Hipótesis
+A partir de enero, se observa un aumento en la cantidad de reservas hasta agosto, acompañado de un incremento en las cancelaciones. Los datos sugieren una tendencia de ADR más alta en las cancelaciones. Se podría suponer que las tarifas más altas están relacionadas con un mayor número de cancelaciones.
+Según el problema planteado por el CEO, se observa un alto porcentaje de cancelaciones entre los huéspedes de Portugal, con la mayoría de estas reservas gestionadas por agencias. Esto sugiere que podrían estar pagando costos variables por reservas canceladas.
+Posibles Soluciones
+Requerir depósitos con tarjeta de crédito/débito o efectivo para evitar cancelaciones.
+Ofrecer tarifas más bajas o descuentos para reservas directas y reducir la dependencia de reservas a través de agencias para disminuir el costo variable.
+Revisar el contrato para eliminar el costo asociado a reservas canceladas.
+Implementar una estrategia de overbooking cautelosa para maximizar la ocupación.
+Storytelling
+Introducción al Proyecto: Este proyecto se centra en predecir las cancelaciones de reservas de hotel y en cómo esta información puede ser utilizada para mejorar la gestión de ingresos en la industria hotelera.
 
-Preguntas 1 - Cuàl es el porcentaje de cancelaciones en toda la cadena hotelera? 2 - En què tipo de hotel suceden con mayor frecuencia estas cancelaciones? 3 - En que mes del año se dan la mayor cantidad de cancelaciones? 4 - De què continente es el mayor porcentaje de cancelaciones? y de que paises? 5 - Cuàl es la tarifa media (ADR) para las cancelaciones y las reservas cumplidas? 6 - Según el gráfico del punto 4, que metodología de reservas utilizan para las reservas de Portugal? 7 - Hay muchas cancelaciones de agencias?
+Obtención del Conjunto de Datos: Utilizamos un conjunto de datos obtenido de Kaggle que proporciona información detallada sobre las reservas de hotel, incluyendo datos demográficos de clientes y detalles de las reservas.
 
-Posibles hipótesis 1 - A apartir del mes de enero según el gráfico n°5 se da un ascenso en la cantidad de reservas hasta el mes de agosto, donde a este ascenso también lo acompaña una tendencia de cancelaciones. En el gráfico se observa una ligera tendencia de ADR más altos en la linea de cancelaciones. Podríamos suponer que esa tendencia a cancelaciones se debe a los ADR más altos. 2 - Según el problema panteado por el CEO, el mayor porcentaje de cancelaciones se esta dando con los posibles huéspedes de Portugal, y la mayoría de estos son contratados mediante agencias. Por lo que posiblemente se le este pagando un costo variable por las reservas canceladas.
+Exploración del Conjunto de Datos y Limpieza: Realizamos una exploración exhaustiva del conjunto de datos para entender su estructura y características. Se limpian los datos eliminando registros faltantes o irrelevantes.
 
-Posibles soluciones 1 - Requerir depósitos con tarjeta de crédito/débito/efectivo, para evitar futuras cancelaciones. 2 - Ofrecer tarifas bajas/descuentos para reservas directas, y bajar la cantidad de reservas realizadas por agencias y así bajar el costo variable por reservas. 3 - Rever el contrato para no pagar el costo de reservas canceladas. 4 - Adoptar una estrategia cautelosa de overbooking.
+Proceso de Aprendizaje Automático: Describimos el proceso de entrenamiento del modelo utilizando librerías de scikit-learn para evaluar distintos modelos y ajustar sus parámetros.
 
-Storytelling Introducción al Proyecto: El proyecto se centra en la predicción de cancelaciones de reservas de hotel y cómo esto puede ser valioso para la industria hotelera.
+División de Entrenamiento/Prueba: Se divide el conjunto de datos en conjuntos de entrenamiento y prueba para evaluar el rendimiento del modelo.
 
-Obtención del Conjunto de Datos: El conjunto de datos utilizado en el proyecto se obtiene de Kaggle y contiene información sobre reservas de hotel, incluyendo datos demográficos de clientes, detalles de la reserva y otros factores relevantes.
-
-Exploración del Conjunto de Datos y limpieza: Se realiza una exploración detallada del conjunto de datos para comprender su estructura y características clave para luego evaluar los datos relevantes y realizar la limpieza de los datos faltantes o no relevantes.
-
-Proceso de Aprendizaje Automático: Se describe el proceso de entrenamiento del modelo, donde se utilizan librerías de Sklearn para evaluar los modelos.
-
-División de Entrenamiento/Prueba: Se divide el conjunto de datos en conjuntos de entrenamiento y prueba para evaluar el modelo.
-
-Evaluación del Rendimiento del Modelo: Se evalúa el rendimiento del modelo utilizando métricas como precisión, puntuación F1.
+Evaluación del Rendimiento del Modelo: Se evalúa el modelo usando métricas como precisión y puntuación F1 para determinar su efectividad en la predicción de cancelaciones.
