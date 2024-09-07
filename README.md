@@ -9,15 +9,25 @@ El CEO de una cadena hotelera ha identificado un problema en el contrato con las
 Descripción de los Campos
 
 hotel: Tipo de hotel (Ciudad o Resort)
+
 is_canceled: Indicador de cancelación (1 = Cancelado, 0 = No Cancelado)
+
 lead_time: Tiempo de anticipación en días para la reserva
+
 arrival_date_year: Año de llegada
+
 arrival_date_month: Mes de llegada
+
 arrival_date_week_number: Número de semana de llegada
+
 arrival_date_day_of_month: Día del mes de llegada
+
 stays_in_weekend_nights: Noches de fin de semana en la estancia
+
 stays_in_week_nights: Noches de semana en la estancia
+
 adults: Número de adultos
+
 children: Número de niños
 babies: Número de bebés
 meal: Tipo de comida
