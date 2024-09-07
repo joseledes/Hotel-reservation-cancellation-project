@@ -1,10 +1,13 @@
-##Introducción
+Introducción
+
 En este proyecto, se analizarán los datos de reservas de una cadena hotelera para investigar las razones detrás de las altas tasas de cancelación y proponer estrategias para reducir estas cancelaciones y asegurar los ingresos. El dataset se obtuvo de Kaggle, una plataforma pública que proporciona acceso a una amplia variedad de datos. El conjunto de datos incluye información sobre dos tipos de hoteles (ciudad y resort) y si las reservas fueron canceladas o no. Cada registro corresponde a una reserva e incluye detalles como la fecha de llegada, duración de la estancia, número de adultos y niños, solicitudes especiales, entre otros.
 
 Problema Planteado
+
 El CEO de una cadena hotelera ha identificado un problema en el contrato con las agencias de marketing. El contrato establece un costo fijo mensual y un costo variable basado en las reservas realizadas. El CEO sospecha que están pagando por reservas canceladas, y no se ha verificado si la tasa de cancelación ha cambiado desde que se firmó el contrato. Las cancelaciones de última hora pueden llevar a pérdidas de ingresos significativas. El objetivo de este proyecto es analizar los datos de reservas, investigar los patrones de cancelación y sugerir medidas para reducirlas y proteger los ingresos.
 
 Descripción de los Campos
+
 hotel: Tipo de hotel (Ciudad o Resort)
 is_canceled: Indicador de cancelación (1 = Cancelado, 0 = No Cancelado)
 lead_time: Tiempo de anticipación en días para la reserva
@@ -44,7 +47,9 @@ Preguntas de Investigación
 ¿Cuál es la tarifa media (ADR) para las reservas canceladas frente a las reservas cumplidas?
 Según el gráfico del punto 4, ¿qué metodología de reservas se utiliza para las reservas en Portugal?
 ¿Hay muchas cancelaciones provenientes de agencias?
+
 Hipótesis
+
 A partir de enero, se observa un aumento en la cantidad de reservas hasta agosto, acompañado de un incremento en las cancelaciones. Los datos sugieren una tendencia de ADR más alta en las cancelaciones. Se podría suponer que las tarifas más altas están relacionadas con un mayor número de cancelaciones.
 Según el problema planteado por el CEO, se observa un alto porcentaje de cancelaciones entre los huéspedes de Portugal, con la mayoría de estas reservas gestionadas por agencias. Esto sugiere que podrían estar pagando costos variables por reservas canceladas.
 Posibles Soluciones
@@ -52,7 +57,9 @@ Requerir depósitos con tarjeta de crédito/débito o efectivo para evitar cance
 Ofrecer tarifas más bajas o descuentos para reservas directas y reducir la dependencia de reservas a través de agencias para disminuir el costo variable.
 Revisar el contrato para eliminar el costo asociado a reservas canceladas.
 Implementar una estrategia de overbooking cautelosa para maximizar la ocupación.
+
 Storytelling
+
 Introducción al Proyecto: Este proyecto se centra en predecir las cancelaciones de reservas de hotel y en cómo esta información puede ser utilizada para mejorar la gestión de ingresos en la industria hotelera.
 
 Obtención del Conjunto de Datos: Utilizamos un conjunto de datos obtenido de Kaggle que proporciona información detallada sobre las reservas de hotel, incluyendo datos demográficos de clientes y detalles de las reservas.
