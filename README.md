@@ -29,27 +29,49 @@ stays_in_week_nights: Noches de semana en la estancia
 adults: Número de adultos
 
 children: Número de niños
+
 babies: Número de bebés
+
 meal: Tipo de comida
+
 country: País de origen del huésped
+
 market_segment: Segmento de mercado
+
 distribution_channel: Canal de distribución
+
 is_repeated_guest: Indicador de huésped recurrente (1 = Sí, 0 = No)
+
 previous_cancellations: Número de cancelaciones anteriores
+
 previous_bookings_not_canceled: Número de reservas anteriores no canceladas
+
 reserved_room_type: Tipo de habitación reservada
+
 assigned_room_type: Tipo de habitación asignada
+
 booking_changes: Número de cambios en la reserva
+
 agent: Agente de reservas
+
 company: Compañía asociada con la reserva
+
 days_in_waiting_list: Días en lista de espera
+
 customer_type: Tipo de cliente
+
 adr: Tarifa diaria promedio
+
 required_car_parking_spaces: Espacios de aparcamiento requeridos
+
 total_of_special_requests: Número total de solicitudes especiales
+
 reservation_status: Estado de la reserva
+
 reservation_status_date: Fecha del estado de la reserva
+
 Preguntas de Investigación
+
 ¿Cuál es el porcentaje total de cancelaciones en la cadena hotelera?
 ¿En qué tipo de hotel ocurren con mayor frecuencia estas cancelaciones?
 ¿En qué mes del año se producen la mayor cantidad de cancelaciones?
@@ -72,12 +94,17 @@ Storytelling
 
 Introducción al Proyecto: Este proyecto se centra en predecir las cancelaciones de reservas de hotel y en cómo esta información puede ser utilizada para mejorar la gestión de ingresos en la industria hotelera.
 
+
 Obtención del Conjunto de Datos: Utilizamos un conjunto de datos obtenido de Kaggle que proporciona información detallada sobre las reservas de hotel, incluyendo datos demográficos de clientes y detalles de las reservas.
 
+
 Exploración del Conjunto de Datos y Limpieza: Realizamos una exploración exhaustiva del conjunto de datos para entender su estructura y características. Se limpian los datos eliminando registros faltantes o irrelevantes.
+
 
 Proceso de Aprendizaje Automático: Describimos el proceso de entrenamiento del modelo utilizando librerías de scikit-learn para evaluar distintos modelos y ajustar sus parámetros.
 
 División de Entrenamiento/Prueba: Se divide el conjunto de datos en conjuntos de entrenamiento y prueba para evaluar el rendimiento del modelo.
 
+
 Evaluación del Rendimiento del Modelo: Se evalúa el modelo usando métricas como precisión y puntuación F1 para determinar su efectividad en la predicción de cancelaciones.
+
