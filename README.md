@@ -1,4 +1,4 @@
-Introducción
+##Introducción
 En este proyecto, se analizarán los datos de reservas de una cadena hotelera para investigar las razones detrás de las altas tasas de cancelación y proponer estrategias para reducir estas cancelaciones y asegurar los ingresos. El dataset se obtuvo de Kaggle, una plataforma pública que proporciona acceso a una amplia variedad de datos. El conjunto de datos incluye información sobre dos tipos de hoteles (ciudad y resort) y si las reservas fueron canceladas o no. Cada registro corresponde a una reserva e incluye detalles como la fecha de llegada, duración de la estancia, número de adultos y niños, solicitudes especiales, entre otros.
 
 Problema Planteado
